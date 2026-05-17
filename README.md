@@ -1,16 +1,16 @@
-# React + Vite
+# Sheet Herder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+### Contributors
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Daniel Hangaard**
+cph-dh258@stud.ek.dk
+github.com/DHangaard
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## License
 
-## Expanding the ESLint configuration
+The source code in this repository is licensed under the MIT License.
+See the [LICENSE](./LICENSE) file for details.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Note:** The project name, logo, and visual identity are **not** included under the MIT License. Please refer to [BRANDING.md](./BRANDING.md) for usage guidelines and copyright information regarding these assets.
