@@ -3,9 +3,9 @@
 
 ### Contributors
 
-**Daniel Hangaard**  
-cph-dh258@stud.ek.dk  
-github.com/DHangaard  
+**Daniel Hangaard**<br/>
+cph-dh258@stud.ek.dk<br/>
+github.com/DHangaard<br/>
 
 
 ## License
