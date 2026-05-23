@@ -1,0 +1,40 @@
+.toggleContainer {
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    display: none;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    width: 3.5rem;
+    height: 1.875rem;
+    border-radius: var(--radius-full);
+    background-color: var(--theme-toggle-bg);
+    cursor: pointer;
+    padding: 0.125rem;
+    transition: background-color var(--transition-theme);
+    position: relative;
+    overflow: hidden;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.625rem;
+    height: 1.625rem;
+    border-radius: var(--radius-full);
+    background-color: var(--theme-toggle-fg);
+    color: white;
+    font-size: 0.875rem;
+    transition: transform var(--transition-theme);
+    transform: translateX(0);
+}
+
+.input:checked + .label .icon {
+    transform: translateX(1.625rem);
+}

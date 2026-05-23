@@ -1,0 +1,15 @@
+.placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder span {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.05em;
+}
