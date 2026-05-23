@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+    transition: background-color var(--transition-base), 
+                color var(--transition-base),
+                border-color var(--transition-base),
+                text-decoration-color var(--transition-base);
+}
+
+body {
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-primary);
+}
+
+main {
+    flex: 1;
+    padding: var(--space-2xl) 0;
+}
