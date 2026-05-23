@@ -1,0 +1,30 @@
+.tabSwitcher {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.tab {
+    background: none;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-full);
+    padding: var(--space-xs) var(--space-md);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+}
+
+.tab:hover {
+    border-color: var(--color-text-primary);
+    color: var(--color-text-primary);
+}
+
+.tab:active {
+    filter: brightness(0.9);
+}
+
+.tabActive {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    font-weight: 600;
+}
