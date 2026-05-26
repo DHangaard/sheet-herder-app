@@ -1,8 +1,6 @@
-import { createContext, useContext, useState, useEffect } from 'react';
-import { login as loginService, logout as logoutService, getToken, isTokenExpired } from '../services/authService';
-
-const AuthContext = createContext(null);
-const AuthActionsContext = createContext(null);
+import { useState } from 'react';
+import { AuthContext, AuthActionsContext } from './authContext';
+import { login as loginService, logout as logoutService, getToken, isTokenExpired } from '../../services/authService';
 
 function decodeToken(token) {
     try {
@@ -14,18 +12,15 @@ function decodeToken(token) {
     }
 }
 
-export function AuthProvider({ children }) {
-    const [currentUser, setCurrentUser] = useState(null);
-
-    useEffect(() => {
+export default function AuthProvider({ children }) {
+    const [currentUser, setCurrentUser] = useState(() => {
         const token = getToken();
-        if (!token) return;
-        if (isTokenExpired()) {
+        if (!token || isTokenExpired()) {
             logoutService();
-            return;
+            return null;
         }
-        setCurrentUser(decodeToken(token));
-    }, []);
+        return decodeToken(token);
+    });
 
     async function login(credentials) {
         const token = await loginService(credentials);
@@ -44,12 +39,4 @@ export function AuthProvider({ children }) {
             </AuthActionsContext.Provider>
         </AuthContext.Provider>
     );
-}
-
-export function useAuth() {
-    return useContext(AuthContext);
-}
-
-export function useAuthActions() {
-    return useContext(AuthActionsContext);
 }
