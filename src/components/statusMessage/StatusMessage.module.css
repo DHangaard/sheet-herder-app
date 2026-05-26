@@ -1,0 +1,41 @@
+.statusMessage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.accent {
+    width: var(--space-xs);
+    align-self: stretch;
+}
+
+.statusMessage p {
+    padding: var(--space-sm) var(--space-md);
+    font-weight: 600;
+}
+
+.error {
+    background-color: color-mix(in srgb, var(--color-error) 15%, var(--color-status-mix-base));
+}
+
+.error .accent {
+    background-color: var(--color-error);
+}
+
+.error p {
+    color: var(--color-error);
+}
+
+.success {
+    background-color: color-mix(in srgb, var(--color-success) 15%, var(--color-status-mix-base));
+}
+
+.success .accent {
+    background-color: var(--color-success);
+}
+
+.success p {
+    color: var(--color-success);
+}
