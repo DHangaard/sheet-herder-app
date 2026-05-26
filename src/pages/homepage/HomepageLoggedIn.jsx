@@ -1,4 +1,4 @@
-import { useAuth } from '../../context/AuthContext'
+import { useAuth } from '../../context/auth/useAuth.js' 
 import FeatureCard from '../../components/featureCard/FeatureCard.jsx'
 import styles from './HomepageLoggedIn.module.css'
 
