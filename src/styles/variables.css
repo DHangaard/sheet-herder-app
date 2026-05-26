@@ -24,6 +24,9 @@
     --theme-toggle-bg: #F0EB9D;
     --theme-toggle-fg: #FFD000;
 
+    /* Status Message */
+    --color-status-mix-base: #FFFFFF;
+
     /* Spacing */
     --space-xs: 0.25rem;   /* 4px */
     --space-sm: 0.5rem;    /* 8px */
@@ -74,4 +77,7 @@
     /* Theme Toggle */
     --theme-toggle-bg: #283452;
     --theme-toggle-fg: #00A6FF;
+
+    /* Status Message */
+    --color-status-mix-base: #1A1A1A;
  }
