@@ -1,6 +1,5 @@
-import { NavLink, Link } from 'react-router'
-import { useAuth } from '../../context/AuthContext'
-import { useAuthActions } from '../../context/AuthContext'
+import { NavLink, Link, useLocation } from 'react-router'
+import { useAuth, useAuthActions } from '../../context/auth/useAuth.js'
 import styles from './Header.module.css'
 import Toggle from '../toggle/Toggle.jsx'
 
@@ -8,10 +7,14 @@ const navLinks = [
     { label: 'My Characters', to: '/characters' },
     { label: 'My Campaigns', to: '/campaigns' },
 ];
+const authPaths = ['/login', '/register'];
 
 export default function Header({ isDark, toggleTheme }) {
     const { currentUser, isLoggedIn } = useAuth();
     const { logout } = useAuthActions();
+
+    const location = useLocation();
+    const isAuthActive = authPaths.includes(location.pathname);
 
     return (
         <header className={styles.header}>
@@ -50,11 +53,7 @@ export default function Header({ isDark, toggleTheme }) {
                     ) : (
                         <NavLink
                             to="/login"
-                            className={({ isActive }) =>
-                                isActive
-                                    ? `${styles.navLink} ${styles.navLinkActive}`
-                                    : styles.navLink
-                            }
+                            className={isAuthActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink}
                         >
                             Log in
                         </NavLink>
