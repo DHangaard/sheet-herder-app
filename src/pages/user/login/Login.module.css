@@ -1,0 +1,25 @@
+.fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-lg);
+}
+
+.disabledLink {
+    color: var(--color-text-secondary);
+    cursor: not-allowed;
+    pointer-events: none;
+    text-decoration: none;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+}
